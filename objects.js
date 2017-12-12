@@ -4,7 +4,7 @@ function Student(firstName,lastName,grade) {
     this.grade = grade;
 
     /* needs to be implemented
-    this.sections
+    this.sections = [];
      */
 }
 
@@ -12,6 +12,10 @@ function Teacher(firstName,lastName,subject) {
     this.firstName = firstName;
     this.lastName = lastName;
     this.subject = subject;
+
+    /* needs to be implemented
+    this.sections = [];
+     */
 }
 
 function Section(name,count) {

@@ -13,11 +13,10 @@ function listItems() {
 }
 
 function addItems() {
-
+    //needs to be implemented
 }
 
 function populateLists() {
-    console.log(allItems);
     for(var i=0;i<allItems[0].length;i++) {
         document.getElementById("studentList").innerHTML +=
             "<option>" + allItems[0][i].firstName + " " + allItems[0][i].lastName + "</option>"
@@ -63,7 +62,7 @@ function addSection() {
 
 function clearBoxes() {
     var elements = document.getElementsByTagName("input");
-    for (var i=0; i< elements.length; i++) {
+    for (var i=0; i<elements.length; i++) {
         if (elements[i].type == "text") {
             elements[i].value = "";
         }
