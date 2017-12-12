@@ -1,0 +1,9 @@
+body {
+    font: 18px sans-serif;
+    margin: 30px;
+    background: lightcyan;
+}
+
+input,select,button {
+    font-size: 18px;
+}
