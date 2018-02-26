@@ -3,12 +3,25 @@ function listItems() {
     var items = allItems[selection];
     var result = "";
 
+    if(selection == 1) {
+        //build students display table
+    }
+    if(selection == 2) {
+        //build teachers display table
+    }
+    if(selection == 3) {
+        //build sections display table
+    }
+
+    // ** short cut way to do this - do not use - make a table like above
     for(var i = 0; i<items.length; i++) {
         for(key in items[i]) {
             result += items[i][key] + " ";
         }
         result += "<br>";
     }
+    // ** short cut way to do this - do not use - make a table like above
+
     document.getElementById("listOutput").innerHTML = result;
 }
 
@@ -17,18 +30,21 @@ function addItems() {
 }
 
 function populateLists() {
+    var students, sections, teachers;
     for(var i=0;i<allItems[0].length;i++) {
-        document.getElementById("studentList").innerHTML +=
-            "<option>" + allItems[0][i].firstName + " " + allItems[0][i].lastName + "</option>"
+        students += "<option>" + allStudents[i].firstName + " " + allStudents[i].lastName + "</option>"
     }
     for(var j=0;j<allItems[1].length;j++) {
-        document.getElementById("teacherList").innerHTML +=
-            "<option>" + allItems[1][j].firstName + " " + allItems[1][j].lastName + "</option>"
+         teachers += "<option>" + allTeachers[j].firstName + " " + allTeachers[j].lastName + "</option>"
     }
     for(var k=0;k<allItems[2].length;k++) {
-        document.getElementById("sectionList").innerHTML +=
-            "<option>" + allItems[2][k].name + "</option>"
+         sections += "<option>" + allSections[k].name + "</option>"
     }
+    document.getElementById("studentList").innerHTML = students;
+    document.getElementById("teacherList").innerHTML = teachers;
+    document.getElementById("sectionList1").innerHTML = sections;
+    document.getElementById("sectionList2").innerHTML = sections;
+    document.getElementById("sectionList3").innerHTML = sections;
 }
 
 function addStudent() {
@@ -58,6 +74,10 @@ function addSection() {
     allSections.push(new Section(name,count));
     document.getElementById("confirm").innerHTML = "Section Added";
     clearBoxes();
+}
+
+function listStudentsInSection() {
+
 }
 
 function clearBoxes() {

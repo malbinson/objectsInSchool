@@ -20,5 +20,6 @@ allSections.push(new Section("US History",30));
 allSections.push(new Section("CS",32));
 allSections.push(new Section("English",30));
 
+//only used for list display short cut - you prolly wont need
 var allItems = [allStudents,allTeachers,allSections];
 

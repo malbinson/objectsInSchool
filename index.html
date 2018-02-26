@@ -12,40 +12,17 @@
 <body onload="populateLists()">
 
 <h1>Deluxe School Management System 1.0</h1>
-
-<select id="list">
-    <option value="0">Students</option>
-    <option value="1">Teachers</option>
-    <option value="2">Sections</option>
-</select>
-
-<button id="listBtn" onclick="listItems()">List Items</button>
-
-<br><br>
-
-<div id="listOutput"></div>
+<h4>Completing the features here will earn you a B.  Ways to go further:</h4>
+<ul>
+    <li>Remove students from sections</li>
+    <li>Build a search mechanism</li>
+    <li>Make it prettier - Bootstrap, Font Awesome can help with this</li>
+    <li>Error checking</li>
+</ul>
 
 <hr>
 
-<br>
-
-<select id="studentList">
-    <option value="0">Select Student</option>
-</select>
-<select id="sectionList">
-    <option value="0">Select Section</option>
-</select>
-<select id="teacherList">
-    <option value="0">Select Teacher</option>
-</select>
-
-<button id="addBtn" onclick="addItems()">Add Selection</button>
-
-<br><br>
-
-<hr>
-
-<br>
+<h2>Add New Items</h2>
 
 <input id="sfn" placeholder="first name">
 <input id="sln" placeholder="lastname">
@@ -67,6 +44,60 @@
 <input id="sc" placeholder="section count">
 
 <button id="addSection" onclick="addSection()">Add Section</button>
+
+<br><br>
+
+<hr>
+
+<h2>List Items</h2>
+
+<select id="list">
+    <option value="0">Students</option>
+    <option value="1">Teachers</option>
+    <option value="2">Sections</option>
+</select>
+
+<button id="listBtn" onclick="listItems()">List Items</button>
+
+<br><br>
+
+<div id="listOutput"></div>
+
+<hr>
+
+<h2>Add Students and Teachers to Sections</h2>
+
+<select id="studentList">
+    <option value="0">Select Student</option>
+</select>
+<select id="sectionList1">
+    <option value="0">Select Section</option>
+</select>
+
+<button id="addStudentBtn" onclick="addItems()">Add Student to Section</button>
+
+<br><br>
+
+<select id="teacherList">
+    <option value="0">Select Teacher</option>
+</select>
+<select id="sectionList2">
+    <option value="0">Select Section</option>
+</select>
+
+<button id="addTeacherBtn" onclick="addItems()">Add Teacher to Section</button>
+
+<br><br>
+
+<hr>
+
+<h2>List Students in a Section</h2>
+
+<select id="sectionList3">
+    <option value="0">Select Section</option>
+</select>
+
+<button id="listStudentsInSection" onclick="listStudentsInSection()">List Students in Section</button>
 
 <br><br>
 
